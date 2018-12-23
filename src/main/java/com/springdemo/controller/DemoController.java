@@ -9,6 +9,12 @@ public class DemoController {
 
     @RequestMapping("/index")
     public String index(){
+        try {
+            System.out.println("Im here!" + Thread.currentThread().getName());
+            Thread.sleep(100000009);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "demo";
     }
 }
